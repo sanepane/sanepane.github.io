@@ -1,24 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  margin-top: 45px;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
-        <title>SanePane</title>
-    </head>
-    <body>
-      <div class="container">
+body {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  background-color: #2F2F2F;
+}
 
-        <div class="terminal">
-            SanePane aaba <p class="repos"></p> pachi bhetaula :)
-        </div>
-      </div>
+p {
+  font-size: 30px;
+  text-align: center;
+  color: #8BD335;
+}
 
+#timer {
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 400;
+}
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+</style>
+</head>
+<body>
+<h1 id="timer"></h1>
+<p>Din Pachi Bhetaula ❤️</p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 20, 2019 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "FINALLY WE ARE TOGETHER";
+  }
+}, 1000);
+</script>
+
+</body>
 </html>

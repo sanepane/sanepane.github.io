@@ -48,6 +48,309 @@ h1 {
 .loader__dot { animation: 1s blink infinite }
 .loader__dot:nth-child(2) { animation-delay: 250ms }
 .loader__dot:nth-child(3) { animation-delay: 500ms }
+  
+  @import url('https://fonts.googleapis.com/css?family=Exo+2:900');
+
+h1 {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 8.5vw;
+	color: white;
+	padding: 5rem 0;
+	text-shadow: 0px 4px 48px rgba(255,255,255,0.2);
+}
+
+.container {
+	position: relative;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	background: {
+		image: linear-gradient(to bottom,  #00c9ff 0%, #92fe9d 100%), url(https://images.unsplash.com/photo-1502726299822-6f583f972e02);
+		blend-mode: multiply;
+		size: cover;
+	}
+	overflow: hidden;
+}
+
+.bubbles-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 15rem;
+    transform: translateX(-50%);
+	opacity: 0.75;
+	overflow: visible;
+}
+
+.bubbles {
+	width: 100%;
+	height: auto;
+	
+	circle {
+		stroke: white;
+		fill: none;
+	}
+	
+	> g > g:nth-of-type(3n) circle {
+		stroke: #87f5fb;
+	}
+	
+	> g > g:nth-of-type(4n) circle {
+		stroke: #8be8cb;
+	}
+	
+}
+
+.bubbles-large {
+	overflow: visible;
+
+	> g {
+		transform: translateY(2048px);
+		opacity: 0;
+		will-change: transform, opacity;
+	}
+
+	g:nth-of-type(1) {
+		animation: up 6.5s infinite;
+		
+		g {
+			transform: translateX(350px);
+		}
+
+		circle {
+			animation: wobble 3s infinite ease-in-out;
+		}
+
+	}
+	
+	g:nth-of-type(2) {
+		animation: up 5.25s 250ms infinite;
+		
+		g {
+			transform: translateX(450px);
+		}
+
+		circle {
+			animation: wobble 3s infinite ease-in-out;
+		}
+
+	}
+	
+	g:nth-of-type(3) {
+		animation: up 6s 750ms infinite;
+		
+		g {
+			transform: translateX(700px);
+		}
+
+		circle {
+			animation: wobble 3s infinite ease-in-out;
+		}
+
+	}
+	
+	g:nth-of-type(4) {
+		animation: up 5.5s 1.5s infinite;
+		
+		g {
+			transform: translateX(500px);
+		}
+
+		circle {
+			animation: wobble 3s infinite ease-in-out;
+		}
+
+	}
+	
+	g:nth-of-type(5) {
+		animation: up 6.5s 4s infinite;
+		
+		g {
+			transform: translateX(675px);
+		}
+
+		circle {
+			animation: wobble 3s infinite ease-in-out;
+		}
+
+	}
+
+}
+
+.bubbles-small {
+	overflow: visible;
+
+	> g {
+		transform: translateY(2048px);
+		opacity: 0;
+		will-change: transform, opacity;
+	}
+
+	g circle {
+		transform: scale(0);
+	}
+
+	g:nth-of-type(1) {
+		animation: up 5.25s infinite;
+		
+		g {
+			transform: translateX(350px);
+		}
+
+		circle {
+			animation: wobble 3s infinite ease-in-out;
+		}
+
+	}
+
+	g:nth-of-type(2) {
+		animation: up 5.75s infinite;
+		
+		g {
+			transform: translateX(750px);
+		}
+
+		circle {
+			animation: wobble 3s infinite ease-in-out;
+		}
+
+	}
+
+	g:nth-of-type(3) {
+		animation: up 5.25s 250ms infinite;
+		
+		g {
+			transform: translateX(350px);
+		}
+
+		circle {
+			animation: wobble 3s 250ms infinite ease-in-out;
+		}
+
+	}
+
+	g:nth-of-type(4) {
+		animation: up 5.75s 325ms infinite;
+		
+		g {
+			transform: translateX(180px);
+		}
+
+		circle {
+			animation: wobble 3s 325ms infinite ease-in-out;
+		}
+
+	}
+
+	g:nth-of-type(5) {
+		animation: up 6s 125ms infinite;
+		
+		g {
+			transform: translateX(350px);
+		}
+
+		circle {
+			animation: wobble 3s 250ms infinite ease-in-out;
+		}
+
+	}
+
+	g:nth-of-type(6) {
+		animation: up 5.13s 250ms infinite;
+		
+		g {
+			transform: translateX(650px);
+		}
+
+		circle {
+			animation: wobble 3s 125ms infinite ease-in-out;
+		}
+
+	}
+
+	g:nth-of-type(7) {
+		animation: up 6.25s 350ms infinite;
+		
+		g {
+			transform: translateX(480px);
+		}
+
+		circle {
+			animation: wobble 3s 325ms infinite ease-in-out;
+		}
+
+	}
+	
+	g:nth-of-type(8) {
+		animation: up 7s 200ms infinite;
+		
+		g {
+			transform: translateX(330px);
+		}
+
+		circle {
+			animation: wobble 3s 325ms infinite ease-in-out;
+		}
+
+	}
+
+	g:nth-of-type(9) {
+		animation: up 6.25s 233ms infinite;
+		
+		g {
+			transform: translateX(230px);
+		}
+
+		circle {
+			animation: wobble 3s 275ms infinite ease-in-out;
+		}
+
+	}
+	
+	g:nth-of-type(10) {
+		animation: up 6s 900ms infinite;
+		
+		g {
+			transform: translateX(730px);
+		}
+
+		circle {
+			animation: wobble 2s 905ms infinite ease-in-out;
+		}
+
+	}
+	
+}
+
+@keyframes wobble {
+	
+	33% {
+		transform: translateX(-50px);
+	}
+	
+	66% {
+		transform: translateX(50px);
+	}
+	
+}
+
+@keyframes up {
+
+	0% {
+		opacity: 0;
+	}
+	
+	10%, 90% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(-1024px);
+	}
+	
+}
 
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,54 +365,104 @@ h1 {
 
 </head>
 <body>
-<h1>Counting the days<span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span> :)</h1>
-<p>SanePane ❤️</p>
+  
+  <div class="container">
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Sep 22, 2019 05:30:00").getTime();
+	<div class="bubbles-container">
+		<svg class="bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 1024" style="overflow: visible;">
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+        <g class="bubbles-large" stroke-width="7">
+            <g>
+                <g transform="translate(10 940)">
+                    <circle cx="35" cy="35" r="35"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(373 940)">
+                    <circle cx="35" cy="35" r="35"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(408 940)">
+                    <circle cx="35" cy="35" r="35"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(621 940)">
+                    <circle cx="35" cy="35" r="35"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(179 940)">
+                    <circle cx="35" cy="35" r="35"/>
+                </g>
+            </g>
+        </g>
 
-  // Get todays date and time
-  var now = new Date().getTime();
+        <g class="bubbles-small" stroke-width="4">
+            <g>
+                <g transform="translate(147 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(255 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(573 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(429 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(91 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(640 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(321 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(376 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(376 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+            <g>
+                <g transform="translate(497 984)">
+                    <circle cx="15" cy="15" r="15"/>
+                </g>
+            </g>
+        </g>
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+    </svg>
+	</div>
+	
+	<h1>Counting the days<span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span> :)</h1>
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <p>SanePane ❤️</p>
+</div>
 
-  if (days < 10 ) {
-    var days = '0' + days;
-  }
 
-  if (hours < 10 ) {
-    hours = '0' + hours;
-  }
 
-  if ( minutes < 10 ) {
-    var minutes = '0' + minutes;
-  }
 
-  if ( seconds < 10 ) {
-    var seconds = '0' + seconds;
-  }
-
-  // Output the result in an element with id="demo"
-  document.getElementById("timer").innerHTML = days + ":" + hours + ":" +  minutes + ":" + seconds ;
-
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "FINALLY WE ARE TOGETHER :)";
-  }
-}, 1000);
-</script>
 
 </body>
 </html>

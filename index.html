@@ -110,9 +110,9 @@ var x = setInterval(function() {
   document.getElementById("timer").innerHTML = days + ":" + hours + ":" +  minutes + ":" + seconds;
 
   // If the count down is over, write some text
-  if (distance < 0) {
+  if (distance <= 0) {
     clearInterval(x);
-    document.getElementById("timer").innerHTML = "FINALLY WE ARE TOGETHER";
+    document.getElementById("timer").innerHTML = '00' + ":" + '00' + ":" +  '00' + ":" + '00';
   }
 }, 1);
 </script>
